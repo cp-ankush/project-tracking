@@ -1,26 +1,7 @@
-import { Types } from "../actions/items";
+import { combineReducers } from 'redux'
+import pageReducer from "./pageReducer"
 
-const defaultState = {
-  items: [],
-};
-
-const reducer = (state = defaultState, action) => {
-  switch (action.type) {
-    case Types.CREATE_ITEM: {
-      const { items } = state;
-
-      items.push(action.payload);
-
-      return { ...state, items };
-    }
-
-    case Types.DELETE_ITEM: {
-      return state;
-    }
-
-    default:
-      return state;
-  }
-};
-
-export default reducer;
+const rootReducer = combineReducers({
+  pageReducer
+})
+export default rootReducer;

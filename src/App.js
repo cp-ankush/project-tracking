@@ -1,9 +1,13 @@
 import React from "react";
+import LeftPanel from './leftPanel'
+import Projects from "./projects"
 
 const App = () => {
+
   return (
     <div className="AppContainer">
-      <h1>Hello, world!!</h1>
+      <LeftPanel />
+      <Projects />
     </div>
   );
 };

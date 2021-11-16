@@ -1,0 +1,14 @@
+.side-panel {
+    width: 20%;
+    height: 100vh;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.side-panel-item {
+    width: 80%;
+    text-align: left;
+    margin-top: 20px; 
+}

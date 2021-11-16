@@ -1,10 +1,10 @@
-import { all, delay } from "@redux-saga/core/effects";
 
-function* exampleSaga() {
-  yield delay(10);
-  console.log("Example saga reached");
-}
+
+import { spawn } from "@redux-saga/core/effects";
+import pageSaga from "./pageSaga"
+import saga2 from "./saga2"
 
 export default function* rootSaga() {
-  yield all([exampleSaga()]);
+  yield spawn(pageSaga)
+  yield spawn(saga2)
 }
